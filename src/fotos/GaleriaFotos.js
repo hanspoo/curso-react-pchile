@@ -1,11 +1,26 @@
 import React from "react";
+import Foto from "./Foto";
+import styled from "styled-components";
+
+const Galeria = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  max-height: 100vh;
+`;
 
 const GaleriaFotos = ({ fotos }) => (
   <div>
     <h1>Fotos</h1>
     <p>
-      Hay {fotos.length} {fotos.length !== 1 ? "fotos" : "foto"}
+      Hay {fotos.length} {fotos.length === 1 ? "foto" : "fotos"}
     </p>
+    <Galeria>
+      {fotos.map(foto => (
+        <Foto {...foto} />
+      ))}
+    </Galeria>
   </div>
 );
 
