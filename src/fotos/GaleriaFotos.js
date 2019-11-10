@@ -2,6 +2,10 @@ import React from "react";
 import Foto from "./Foto";
 import styled from "styled-components";
 
+/*
+Estilos sacados:
+https://www.quackit.com/css/flexbox/examples/flexbox_photo_gallery_examples.cfm
+*/
 const Galeria = styled.div`
   display: flex;
   flex-wrap: wrap;
